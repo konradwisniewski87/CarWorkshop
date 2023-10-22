@@ -4,3 +4,17 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+
+@{
+    var currentYear = DateTime.Now.Year;
+    var currentDayOfWeek = DateTime.Now.DayOfWeek;
+}
+<p>@currentYear</p>
+@if(currentDayOfWeek == DayOfWeek.Saturday || currentDayOfWeek == DayOfWeek.Sunday)
+{
+    <p>it's weekend'</p>
+} else
+{
+    <p>Not yeat a weekend</p>
+}
