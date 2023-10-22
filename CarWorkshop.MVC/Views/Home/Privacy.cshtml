@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    string eMail = "konradwisniewski@hotmail.com";
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -22,11 +23,17 @@
 @switch (currentDayOfWeek) {
     case DayOfWeek.Monday:
         <p>It's</p>
-        return;
+        break;
     default:
         <p>It's not a Monday</p>
-        return;
+        break;
 
 }
-<p>@currentYear</p>
-<h3>Hello Konrad</h3>
+<a href="mailto:konradwisniewski@hotmail.com">konradwisniewski@hotmail.com</a>
+<br />
+<a href="mailto:@eMail">@eMail</a>
+<br />
+<a href="mailto:@eMail">Napisz do mnie</a>
+<br />
+<h1>ghghghgh</h1>
+<h3>ghghghgh</h3>
