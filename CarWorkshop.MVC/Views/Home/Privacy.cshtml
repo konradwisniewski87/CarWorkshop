@@ -1,6 +1,10 @@
-﻿@{
+﻿@model List<Person>   
+@*Here use model with small case!*@
+
+@{
     ViewData["Title"] = "Privacy Policy";
     string eMail = "konradwisniewski@hotmail.com";
+
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -14,7 +18,7 @@
 <p>@currentYear</p>
 @if(currentDayOfWeek == DayOfWeek.Saturday || currentDayOfWeek == DayOfWeek.Sunday)
 {
-    <p>it's weekend'</p>
+    <p>it's weekend</p>
 } else
 {
     <p>Not yeat a weekend</p>
@@ -35,5 +39,11 @@
 <br />
 <a href="mailto:@eMail">Napisz do mnie</a>
 <br />
-<h1>ghghghgh</h1>
-<h3>ghghghgh</h3>
+<br />
+
+
+@*Here use Model with capitalized case!*@
+@foreach(var person in Model)
+{
+    <p>Witaj @person.FirstName @person.LastName</p>
+}

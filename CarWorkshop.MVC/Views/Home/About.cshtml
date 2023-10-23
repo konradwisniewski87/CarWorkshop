@@ -1,0 +1,13 @@
+﻿@model About
+@{
+
+}
+<h2>@Model.Title</h2>
+<h3>@Model.Description</h3>
+
+<p>Tags:</p>
+    <ul>@foreach (string tag in Model.Tags)
+    {
+        <li>@tag</li>
+    }
+</ul>
