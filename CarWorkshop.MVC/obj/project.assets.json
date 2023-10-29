@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "CarWorkshop.Aplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CarWorkshop.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CarWorkshop.Aplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarWorkshop.Aplication.dll": {}
+        }
+      },
+      "CarWorkshop.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CarWorkshop.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarWorkshop.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CarWorkshop.Aplication/1.0.0": {
+      "type": "project",
+      "path": "../CarWorkshop.Aplication/CarWorkshop.Aplication.csproj",
+      "msbuildProject": "../CarWorkshop.Aplication/CarWorkshop.Aplication.csproj"
+    },
+    "CarWorkshop.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CarWorkshop.Domain/CarWorkshop.Domain.csproj",
+      "msbuildProject": "../CarWorkshop.Domain/CarWorkshop.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "CarWorkshop.Aplication >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Admin\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Aplication.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Aplication.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
