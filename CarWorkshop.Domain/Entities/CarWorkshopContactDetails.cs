@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CarWorkshop.Domain.Entities
 {
-    internal class CarWorkshopContactDetails
+    public class CarWorkshopContactDetails
     {
+        public string? PhoneNumber { get; set; }
+        public string? Street { get; set; }
+        public string? City { get; set; }
+        public string? PostCode { get; set; }
     }
 }

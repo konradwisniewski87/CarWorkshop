@@ -15,6 +15,6 @@ namespace CarWorkshop.Domain.Entities
         public CarWorkshopContactDetails ContactDetails { get; set; } = default!;
 
         public string EncodedName { get; private set; } = default!;
-        public string EncodedName => EncodedName = Name.ToLower().Replace(" ", "-");
+        public void EncodeName() => EncodedName = Name.ToLower().Replace(" ", "-");
     }
 }
