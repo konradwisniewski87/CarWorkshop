@@ -9,13 +9,10 @@ namespace CarWorkshop.Infrastructure.Persistence
 {
     public class CarWorkshopDbContext : DbContext
     {
+        public CarWorkshopDbContext(DbContextOptions<CarWorkshopDbContext> options) : base(options) { }
         //public DbSet<CarWorkshop> CarWorkshops { get; set; } class name can't be same like namespace
         public DbSet<Domain.Entities.CarWorkshop> CarWorkshops { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CarWorkshopDb;Trusted_Connection=True;");
-        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Domain.Entities.CarWorkshop>()
