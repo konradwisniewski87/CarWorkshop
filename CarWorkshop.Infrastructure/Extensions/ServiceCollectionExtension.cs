@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using CarWorkshop.Infrastructure.Seeders;
 
 namespace CarWorkshop.Infrastructure.Extensions
 {
@@ -16,6 +17,8 @@ namespace CarWorkshop.Infrastructure.Extensions
         {
             services.AddDbContext<CarWorkshopDbContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("CarWorkshop")));
+
+            services.AddScoped<CarWorkshopSeeder>();
         }
     }
 }
