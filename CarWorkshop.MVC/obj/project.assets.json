@@ -1133,17 +1133,18 @@
           }
         }
       },
-      "CarWorkshop.Aplication/1.0.0": {
+      "CarWorkshop.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "CarWorkshop.Domain": "1.0.0"
+          "CarWorkshop.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/CarWorkshop.Aplication.dll": {}
+          "bin/placeholder/CarWorkshop.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CarWorkshop.Aplication.dll": {}
+          "bin/placeholder/CarWorkshop.Application.dll": {}
         }
       },
       "CarWorkshop.Domain/1.0.0": {
@@ -1160,7 +1161,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "CarWorkshop.Aplication": "1.0.0",
+          "CarWorkshop.Application": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
         },
         "compile": {
@@ -3490,10 +3491,10 @@
         "version.txt"
       ]
     },
-    "CarWorkshop.Aplication/1.0.0": {
+    "CarWorkshop.Application/1.0.0": {
       "type": "project",
-      "path": "../CarWorkshop.Aplication/CarWorkshop.Aplication.csproj",
-      "msbuildProject": "../CarWorkshop.Aplication/CarWorkshop.Aplication.csproj"
+      "path": "../CarWorkshop.Aplication/CarWorkshop.Application.csproj",
+      "msbuildProject": "../CarWorkshop.Aplication/CarWorkshop.Application.csproj"
     },
     "CarWorkshop.Domain/1.0.0": {
       "type": "project",
@@ -3508,7 +3509,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "CarWorkshop.Aplication >= 1.0.0",
+      "CarWorkshop.Application >= 1.0.0",
       "CarWorkshop.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2"
@@ -3541,8 +3542,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Aplication.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Aplication.csproj"
+            "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Application.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Aplication\\CarWorkshop.Application.csproj"
             },
             "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Infrastructure\\CarWorkshop.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\Admin\\Documents\\Programming\\Projects\\CarWorkshop\\CarWorkshop.Infrastructure\\CarWorkshop.Infrastructure.csproj"
