@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarWorkshop.Application.CarWorkshop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace CarWorkshop.Application.Services
 {
     public interface ICarWorkshopService
     {
-        Task Create(Domain.Entities.CarWorkshop carWorkshop);
+        Task Create(CarWorkshopDTO carWorkshop);
     }
 }
