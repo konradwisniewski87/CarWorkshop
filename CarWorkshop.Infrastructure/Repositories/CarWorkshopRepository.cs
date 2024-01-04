@@ -1,6 +1,7 @@
 ﻿using CarWorkshop.Domain.Interfaces;
 using CarWorkshop.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Immutable;
 
 namespace CarWorkshop.Infrastructure.Repositories
 {
@@ -17,6 +18,9 @@ namespace CarWorkshop.Infrastructure.Repositories
             _dbContext.Add(carWorkshop);
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Domain.Entities.CarWorkshop>> GetAll()
+            => await _dbContext.CarWorkshops.ToListAsync();
 
         public Task<Domain.Entities.CarWorkshop?> GetByName(string name)
             => _dbContext.CarWorkshops.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());

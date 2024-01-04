@@ -22,7 +22,14 @@ namespace CarWorkshop.Application.Mappings
                     PostCode = src.PostCode,
                     Street = src.Street,
                 }));
-                //if is the same name and type, automapper automaticly mapping value, but in this case we must mapping from type values to object
+            //if is the same name and type, automapper automaticly mapping value, but in this case we must mapping from type values to object
+
+
+            CreateMap<Domain.Entities.CarWorkshop, CarWorkshopDTO>()
+                .ForMember(dto => dto.Street, opt => opt.MapFrom(src => src.ContactDetails.Street))
+                .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City))
+                .ForMember(dto => dto.PostCode, opt => opt.MapFrom(src => src.ContactDetails.PostCode))
+                .ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber)); 
         }
     }
 }

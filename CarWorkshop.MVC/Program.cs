@@ -35,6 +35,11 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
+
+#if DEBUG
+    pattern: "{controller=CarWorkshop}/{action=Index}/{id?}");
+#else
     pattern: "{controller=Home}/{action=Index}/{id?}");
+#endif
 
 app.Run();

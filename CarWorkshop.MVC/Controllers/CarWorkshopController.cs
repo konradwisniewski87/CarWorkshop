@@ -18,6 +18,12 @@ namespace CarWorkshop.MVC.Controllers
             return View();
         }
 
+        public async Task<ActionResult> Index() //Name index is default name for main pages, we set this page as main
+        {
+            var carWorkshop = await _carWorkshopService.GetAll();
+            return View(carWorkshop);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create(CarWorkshopDTO carWorkshop)
         {
@@ -26,7 +32,7 @@ namespace CarWorkshop.MVC.Controllers
                 return View(carWorkshop);
             }
             await _carWorkshopService.Create(carWorkshop);
-            return RedirectToAction(nameof(Create));//TODO: refactor
+            return RedirectToAction(nameof(Index));//TODO: refactor
 
         }
     }
