@@ -1,6 +1,7 @@
 ﻿using CarWorkshop.Application.CarWorkshop;
 using CarWorkshop.Application.CarWorkshop.Commands.CreateCarWorkshop;
 using CarWorkshop.Application.CarWorkshop.Queries.GetAllCarWorkshops;
+using CarWorkshop.Application.CarWorkshop.Queries.GetCarWorkshopByEncodedName;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +19,13 @@ namespace CarWorkshop.MVC.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        [Route("CarWorkshop/{encodedName}/Details")]
+        public async Task<ActionResult> Details(string encodedName)
+        {
+            var details = await _mediator.Send(new GetCarWorkshopByEncodedNameQueries(encodedName));
+            return View(details);
         }
 
         public async Task<ActionResult> Index() //Name index is default name for main pages, we set this page as main
