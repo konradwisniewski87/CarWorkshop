@@ -7,7 +7,7 @@ using CarWorkshop.Application.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(option => option.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);//when one parameters is epsent not return error when parameters is set true(set option because while edit return error validation, we not take name while validation, this parameters is Immuteble while this process)
 
 
 builder.Services.AddInfrastructure(builder.Configuration);
