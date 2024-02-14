@@ -31,7 +31,5 @@ namespace CarWorkshop.Infrastructure.Repositories
 
         public Task<Domain.Entities.CarWorkshop?> GetByName(string name)
             => _dbContext.CarWorkshops.FirstOrDefaultAsync(x => x.Name.ToLower() == name.ToLower());
-
-        
     }
 }

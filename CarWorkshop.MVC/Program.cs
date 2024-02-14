@@ -36,10 +36,12 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
 
-#if DEBUG
-    pattern: "{controller=CarWorkshop}/{action=Index}/{id?}");
-#else
+//#if DEBUG
+    //pattern: "{controller=CarWorkshop}/{action=Index}/{id?}");
+//#else
     pattern: "{controller=Home}/{action=Index}/{id?}");
-#endif
+//#endif
+
+app.MapRazorPages();
 
 app.Run();
