@@ -22,6 +22,10 @@ namespace CarWorkshop.MVC.Controllers
 
         public ActionResult Create()
         {
+            if(User.Identity == null || !User.Identity.IsAuthenticated)
+            {
+                return RedirectToPage("/Account/Login", new { area = "Identity"});
+            }
             return View();
         }
 
